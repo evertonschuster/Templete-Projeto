@@ -1,0 +1,17 @@
+@using Stimulsoft.Report.Web;
+@using Stimulsoft.Report.Mvc;
+
+@{
+	ViewData["Title"] = "Report.mrt - Viewer";
+}
+
+@Html.StiNetCoreViewer(new StiNetCoreViewerOptions()
+{
+	Localization = "Localization/pt-BR.xml",
+	Theme = StiViewerTheme.Office2013WhiteBlue,
+	Actions =
+	{
+		GetReport = "GetReport",
+		ViewerEvent = "ViewerEvent"
+	}
+})
